@@ -92,6 +92,7 @@ alt="logo" width="30%" height="30%" class = "center">
     <input type="password" placeholder="Enter your password" id="password" class="pswPos" >
     <button onclick = "window.location.href='about.html'" class="button button1 pos1">about</button>
     <button id="startbutton" onclick = "button2()" class="button button2 pos2">START!</button>
+    <button id="loginbutton" onclick = "button2()" class="button button2 pos2" onclick="register()">login</button>
     <button onclick = "window.location.href='create.html'" class="button button3 pos3">create account</button>
 </body>
 
@@ -102,6 +103,7 @@ alt="logo" width="30%" height="30%" class = "center">
         firebase.auth().signInWithEmailAndPassword(email, password)
           .then((userCredential) => {
             document.getElementById("startbutton").style.visibility = "visible";
+            document.getElementById("loginbutton").style.visibility = "hidden";
             window.alert("Successful login!");
           })
           .catch((error) => {
