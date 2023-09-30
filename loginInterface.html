@@ -88,6 +88,23 @@ alt="logo" width="30%" height="30%" class = "center">
     <button onclick = "window.location.href='create.html'" class="button button3 pos3">create account</button>
 </body>
 
+<<script>
+    function register(){
+        var email = document.getElementById("userText").value;
+        var password = document.getElementById("pswdText").value;
+        firebase.auth().signInWithEmailAndPassword(email, password)
+          .then((userCredential) => {
+            document.getElementById("chatButton").style.visibility = "visible";
+            window.alert("You are logged in!");
+          })
+          .catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            window.alert("Error: " + errorMessage);
+        });
+    }
+</script>
+
 <script>
     function button1(){
        window.alert('hi button1 pressed');
