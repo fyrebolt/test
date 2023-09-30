@@ -1,13 +1,36 @@
-
+    
 <!DOCTYPE html>
 
 <html>
     <head>
         <title>Create an account!</title>
-        <link rel = "icon" href = "https://codehs.com/uploads/087a60099c4c7aaf57c828469b09bf93">
-        <link rel = "stylesheet" href = "firebasetest.css"
+        <link href='https://fonts.googleapis.com/css?family=Nanum Pen Script' rel='stylesheet'>
+        <style>
+            body {
+                font-family: 'Nanum Pen Script';font-size: 22px;
+            }
+        </style>
     </head>
+    <style>
+    .center {
+        display: flex;
+        width: 30%;
+    }
+    .button {
+        border: none;
+        color: white;
+        padding: 5px 22px;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
     
+    .button1 {background-color: #4CAF50; border-radius: 10px;} /* Green */
+    </style>
+
     <script src="https://www.gstatic.com/firebasejs/8.6.4/firebase.js"></script>
      
     <script>
@@ -82,10 +105,16 @@
                 window.alert("Error: "+ errorMessage);
             });
         }
+
+        
     </script>
     
-    <body>
-        <h1>Welcome to HH-Place</h1>
+        <body style="background-color:rgb(231, 188, 146); font-family: 'Nanum Pen Script';">
+        <button onclick = "window.location.href='loginInterface.html'" class="button button1" style="font-size:400%;font-family:Nanum Pen Script">&larr;</button>
+        <img src= "https://fyrebolt.github.io/test/logo.png"
+        alt="logo" width="50%" height="50%" class = "center">
+
+        <h1>Welcome to hh/place</h1>
         
         <h2 id="messageInput">Make an account here!</h2>
         <input placeholder="Enter email" id="makeUser">
