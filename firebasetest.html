@@ -58,8 +58,8 @@
         // };
         // firebase.initializeApp(firebaseConfig);
 
-        import { initializeApp } from "firebase/app";
-        import { getAnalytics } from "firebase/analytics";
+        // import { initializeApp } from "firebase/app";
+        // import { getAnalytics } from "firebase/analytics";
         const firebaseConfig = {
           apiKey: "AIzaSyAGwOTyLlmGwOn44EUhVemcC6dXT53bfSo",
           authDomain: "hyphenhacks2023.firebaseapp.com",
@@ -84,7 +84,7 @@
             const testRef = database.ref('test');
             const newTestRef = testRef.push();
             newTestRef.set({
-                str: str;
+                str: str,
             });
 
             window.alert('stored ' + str + ' into database?');
