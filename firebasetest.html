@@ -70,10 +70,11 @@
           appId: "1:458861648474:web:33b28ea03e0d5bb7e1d663",
           measurementId: "G-6SBQ0J0GZJ"
         };
-        
+
+        firebase.initializeApp(firebaseConfig);
         // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
+        // const app = initializeApp(firebaseConfig);
+        // const analytics = getAnalytics(app);
 
     </script>
 
@@ -81,7 +82,7 @@
         function temporaryFunction(){
             var str = document.getElementById("temporaryfr").value;
 
-            const testRef = database.ref('test');
+            const testRef = firebase.database().ref('test');
             const newTestRef = testRef.push();
             newTestRef.set({
                 str: str,
