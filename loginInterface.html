@@ -98,8 +98,8 @@ alt="logo" width="30%" height="30%" class = "center">
 
 <<script>
     function register(){
-        var email = document.getElementById("userText").value;
-        var password = document.getElementById("pswdText").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
         firebase.auth().signInWithEmailAndPassword(email, password)
           .then((userCredential) => {
             document.getElementById("startbutton").style.visibility = "visible";
