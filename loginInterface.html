@@ -78,13 +78,19 @@ alt="logo" width="30%" height="30%" class = "center">
     margin-left: auto;
     margin-right: auto;
 }
+
+<script>
+    function hideChatButton(){
+        document.getElementById("startbutton").style.visibility = "hidden";
+    }
+</script>
     
 </style>
-<body style="background-color:rgb(231, 188, 146);">
+<body style="background-color:rgb(231, 188, 146);" onload = "hideChatButton()">
     <input type="text" placeholder="Email" id="email" class="userPos" >
     <input type="password" placeholder="Enter your password" id="password" class="pswPos" >
     <button onclick = "window.location.href='about.html'" class="button button1 pos1">about</button>
-    <button onclick = "button2()" class="button button2 pos2">START!</button>
+    <button id="startbutton" onclick = "button2()" class="button button2 pos2">START!</button>
     <button onclick = "window.location.href='create.html'" class="button button3 pos3">create account</button>
 </body>
 
@@ -94,8 +100,8 @@ alt="logo" width="30%" height="30%" class = "center">
         var password = document.getElementById("pswdText").value;
         firebase.auth().signInWithEmailAndPassword(email, password)
           .then((userCredential) => {
-            document.getElementById("chatButton").style.visibility = "visible";
-            window.alert("You are logged in!");
+            document.getElementById("startbutton").style.visibility = "visible";
+            window.alert("Successful login!");
           })
           .catch((error) => {
             var errorCode = error.code;
