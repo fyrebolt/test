@@ -87,6 +87,22 @@ alt="logo" width="30%" height="30%" class = "center">
     }
 </script>
 
+<script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAGwOTyLlmGwOn44EUhVemcC6dXT53bfSo",
+      authDomain: "hyphenhacks2023.firebaseapp.com",
+      databaseURL: "https://hyphenhacks2023-default-rtdb.firebaseio.com",
+      projectId: "hyphenhacks2023",
+      storageBucket: "hyphenhacks2023.appspot.com",
+      messagingSenderId: "458861648474",
+      appId: "1:458861648474:web:33b28ea03e0d5bb7e1d663",
+      measurementId: "G-6SBQ0J0GZJ"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+
+</script>
+
 <body style="background-color:rgb(231, 188, 146);" onload = "hideChatButton()">
     <input type="text" placeholder="Email" id="email" class="userPos" >
     <input type="password" placeholder="Enter your password" id="password" class="pswPos" >
