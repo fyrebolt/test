@@ -1,1 +1,124 @@
 
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Hastin'd >:)</title>
+        <link rel = "icon" href = "https://codehs.com/uploads/087a60099c4c7aaf57c828469b09bf93">
+        <link rel = "stylesheet" href = "about.css"
+    </head>
+    
+    <div class = "parallaxblackheader"></div>
+    
+    <div class="topnav">
+        <a href = "index.html">Home</a>
+        <a href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ">My Youtube Channel</a>
+        <a href = "about.html">About Me!</a>
+        <a href = "projects.html">Other Projects</a>
+        <a class = "active">Firebase</a>
+    </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.6.4/firebase.js"></script>
+    
+    <script>
+        function hideChatButton(){
+            document.getElementById("chatButton").style.visibility = "hidden";
+            document.getElementById("bjButton").style.visibility = "hidden";
+        }
+    </script>
+     
+    <script>
+         function goToChat(){
+            var user = firebase.auth().currentUser;
+            
+            var userEmail = user.email;
+            
+            sessionStorage.setItem("userEmail", userEmail);
+            
+            var name=sessionStorage.getItem("userEmail");
+            
+            window.location.replace('https://hastinchen.codehs.me/chat.html');
+        }
+    </script>
+    
+    <script>
+         function goToBJ(){
+            window.location.replace('https://hastinchen.codehs.me/bj.html');
+        }
+    </script>
+    
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBDZWEBp3_OKXCiSHvi-c-j8NRyHAqiDSw",
+            authDomain: "apcspwebsite21-22.firebaseapp.com",
+            projectId: "apcspwebsite21-22",
+            storageBucket: "apcspwebsite21-22.appspot.com",
+            messagingSenderId: "1014710089371",
+            appId: "1:1014710089371:web:0bf590029d0261ccb1383e"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    
+    <script>
+        function register(){
+            var email = document.getElementById("userText").value;
+            var password = document.getElementById("pswdText").value;
+            firebase.auth().signInWithEmailAndPassword(email, password)
+              .then((userCredential) => {
+                document.getElementById("chatButton").style.visibility = "visible";
+                document.getElementById("bjButton").style.visibility = "visible";
+                window.alert("You are logged in!");
+              })
+              .catch((error) => {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                window.alert("Error: " + errorMessage);
+              });
+        }
+    </script>
+    
+    <script>
+        function createAccount(){
+            var email = document.getElementById("makeUser").value;
+            var password = document.getElementById("makePswd").value;
+            
+            firebase.auth().createUserWithEmailAndPassword(email, password)
+              .then((userCredential) => {
+                var user = userCredential.user;
+                window.alert("Creation success!")
+              })
+              .catch((error) => {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                
+                window.alert("Error: "+ errorMessage);
+            });
+        }
+    </script>
+    
+    <body onload = "hideChatButton()">
+        <h3>Welcome to your Firebase login page</h3>
+        
+        <h4>Have an account? Sign in!</h4>
+        <input placeholder="Enter Username" id="userText">
+        <input type="password" placeholder="Enter Password" id="pswdText" >
+        <input type="button" value="Submit" onclick="register()">
+        <input type="button" value="Redirect to Chatroom!" id="chatButton" onclick="goToChat()">
+        <input type="button" value="Redirect to BLACKJACK!" id = "bjButton" onclick="goToBJ()">
+        <hr>
+        
+        <h4 id="messageInput">Create an account here if you have not already!</h4>
+        <input placeholder="Enter Username" id="makeUser">
+        <input type="password" placeholder="Enter Password" id="makePswd">
+        <br>
+        <input type="button" value="Create Account" onclick="createAccount()">
+    </body>
+    
+    <footer class = "stickToBottom">
+        <div class = "parallaxblackbody">
+            <p style = "color:white;font-size:32px;text-align:center;">Created by a random idiot named Hastin Chen</p>
+            <p style = "color:white;text-align:center;"><a href="mailto:hastin.che@lvjusd.org">Email my school email!</a></p>
+        </div>
+    </footer>
+    
+</html>
