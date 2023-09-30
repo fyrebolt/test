@@ -8,24 +8,7 @@
         <link rel = "stylesheet" href = "firebasetest.css"
     </head>
     
-    <div class = "parallaxblackheader"></div>
-    
-    <div class="topnav">
-        <a href = "index.html">Home</a>
-        <a href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ">My Youtube Channel</a>
-        <a href = "about.html">About Me!</a>
-        <a href = "projects.html">Other Projects</a>
-        <a class = "active">Firebase</a>
-    </div>
-    
     <script src="https://www.gstatic.com/firebasejs/8.6.4/firebase.js"></script>
-    
-    <script>
-        function hideChatButton(){
-            document.getElementById("chatButton").style.visibility = "hidden";
-            document.getElementById("bjButton").style.visibility = "hidden";
-        }
-    </script>
      
     <script>
          function goToChat(){
@@ -102,9 +85,9 @@
     </script>
     
     <body onload = "hideChatButton()">
-        <h3>Welcome to hh/place</h3>
+        <h1>Welcome to hh/place</h1>
         
-        <h4 id="messageInput">Make an account here!</h4>
+        <h2 id="messageInput">Make an account here!</h2>
         <input placeholder="Enter email" id="makeUser">
         <input type="password" placeholder="Enter password" id="makePswd">
         <br>
