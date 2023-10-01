@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>HH-place about</title>
+    <link href='https://fonts.googleapis.com/css?family=Nanum Pen Script' rel='stylesheet'>
+    <style>
+        body {
+            font-family: 'Nanum Pen Script';font-size: 22px;
+        }
+    </style>
+    <title>-MOSAIC about</title>
 </head>
 
 <style>
@@ -9,25 +15,51 @@
     border: none;
     color: white;
     padding: 15px 32px;
-    text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 8px;
+    border-radius: 10px; 
+    font-family: 'Nanum Pen Script'; 
+    font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
 }
 
-.button1 { background-color: #4CAF50; border-radius: 10px;} /* Green */
+.button1 {background-color: #4CAF50; font-size: 30px; transition: all 1s ease; transform: scale(1); } /* Green */
+
+.pos1 {
+    margin: 0;
+    position: absolute;
+    top: 80%;
+    right: 51%;
+    transition: all .5s ease;
+    transform: scale(1);
+  }
+
+.button1:hover {
+    background-color: #3ae462;
+    /*  Making button bigger on hover  */
+    padding: 20px 30px;
+    transform: scale(1.2) 
+}
+
+h3{
+    padding: 0px;
+}
 
 </style>
 </head>
     
-<body style="background-color:rgb(231, 188, 146);">
-<button onclick = "window.location.href='loginInterface.html'" class="button button1" style="font-size:400%;font-family:Comic Sans MS">&larr;</button>
-    
-<h1 style="font-size:260%;font-family:Comic Sans MS">This project was created by Aaron, Andrew, Hastin, and Natalie. This project is a multiplayer drawing software where players create mosaics by placing squares of multiple colors. We created this project with the goal of allowing people to connect with friends and strangers by collaborating with each other to create mosaics. To play first create an account <3 </h1>
-<!-- <img src="https://i.natgeofe.com/k/59ccd67f-c57c-4946-99bd-f957a38dafaa/hippopotamus-closeup-water_square.jpg"
+<body style="background-color:rgb(231, 188, 146); font-family: Nanum Pen Script;">
+<button onclick = "window.location.href='loginInterface.html'" class="button button1"><b>&larr;</b></button>
+<h1 style="font-size:200%;"><u>About</u></h1>
+<h3 style="font-size:150%;">This project was created by Aaron, Andrew, Hastin, and Natalie. This project is a multiplayer drawing software where players create mosaics by placing squares of multiple colors. We created this project with the goal of allowing people to connect with friends and strangers by collaborating with each other to create mosaics. To join, create an account <3 </h3>
+<h1 style="font-size:200%;"><u>How to</u></h1>
+<h3 style="font-size:150%;">Click to place block</h3>
+<h3 style="font-size:150%;">Click numbers to change colors</h3>
+    <!-- <img src="https://i.natgeofe.com/k/59ccd67f-c57c-4946-99bd-f957a38dafaa/hippopotamus-closeup-water_square.jpg"
 alt="handsome hippo <33" width="50%" height="50%"> -->
+<img src="https://fyrebolt.github.io/test/colors.png"
+alt="colors" width="50%" height="50%">
 
 </body>
 </html>
