@@ -183,7 +183,6 @@ body, html {
    }
    function button2(){
         window.alert('hi button2 pressed ee');
-        window.location.replace("game4.html");
 
         var user = firebase.auth().currentUser;
         var userEmail = user.email;
@@ -192,6 +191,8 @@ body, html {
         var name = email.substring(0,index);
 
        sessionStorage.setItem("name", name);
+
+       window.location.href = 'game4.html';
     }
 </script>
 
