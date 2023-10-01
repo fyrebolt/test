@@ -184,6 +184,14 @@ body, html {
    function button2(){
         window.alert('hi button2 pressed ee');
         window.location.replace("game2.html");
+
+        var user = firebase.auth().currentUser;
+        var userEmail = user.email;
+            
+        var index = email.indexOf("@");
+        var name = email.substring(0,index);
+
+       sessionStorage.setItem("name", name);
     }
 </script>
 
