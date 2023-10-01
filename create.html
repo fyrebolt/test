@@ -16,19 +16,36 @@
         display: flex;
         width: 30%;
     }
-    .button {
+   .button {
         border: none;
         color: white;
-        padding: 5px 22px;
-        text-align: center;
+        padding: 15px 32px;
         text-decoration: none;
-        display: flex;
-        font-size: 6px;
+        display: inline-block;
+        border-radius: 10px; 
+        font-family: 'Nanum Pen Script'; 
+        font-size: 16px;
         margin: 4px 2px;
         cursor: pointer;
     }
     
-    .button1 {background-color: #4CAF50; border-radius: 10px;} /* Green */
+    .button1 {background-color: #4CAF50; font-size: 30px; transition: all 1s ease; transform: scale(1); } /* Green */
+    
+    .pos1 {
+        margin: 0;
+        position: absolute;
+        top: 80%;
+        right: 51%;
+        transition: all .5s ease;
+        transform: scale(1);
+      }
+    
+    .button1:hover {
+        background-color: #3ae462;
+        /*  Making button bigger on hover  */
+        padding: 20px 30px;
+        transform: scale(1.2) 
+    }
     </style>
 
     <script src="https://www.gstatic.com/firebasejs/8.6.4/firebase.js"></script>
