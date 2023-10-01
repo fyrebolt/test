@@ -64,40 +64,51 @@ body, html {
     border: none;
     color: white;
     padding: 15px 32px;
-    text-align: center;
     text-decoration: none;
     display: inline-block;
+    border-radius: 10px; 
+    font-family: 'Nanum Pen Script'; 
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
 }
 
-.button1 {background-color: #4CAF50; border-radius: 10px; font-family: 'Nanum Pen Script'; font-size: 30px} /* Green */
-.button2 {background-color: #008CBA; border-radius: 10px; font-family: 'Nanum Pen Script'; font-size: 30px} /* Blue */
-.button3 {background-color: #b8114c; border-radius: 10px; font-family: 'Nanum Pen Script'; font-size: 25px} 
+.button1 {background-color: #4CAF50; font-size: 30px; transition: all 1s ease; transform: scale(1); } /* Green */
+.button2 {background-color: #008CBA; font-size: 30px} /* Blue */
+.button3 {background-color: #b8114c; font-size: 25px} 
 
 .pos1 {
     margin: 0;
     position: absolute;
     top: 80%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    right: 50%;
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
+    right: 51%;
+    transition: all .5s ease;
+    transform: scale(1);
   }
+
+.button1:hover {
+    background-color: #3ae462;
+    /*  Making button bigger on hover  */
+    padding: 20px 30px;
+    transform: scale(1.2) 
+}
 
 .pos2 {
     margin: 0; 
     position: absolute;
     top: 80%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    right: 30%;
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
+    right: 36%;
+    transition: all .5s ease;
+    transform: scale(1);
   }
-  .userPos {
+
+.button2:hover {
+    background-color: #3aaee4;
+    /*  Making button bigger on hover  */
+    padding: 20px 30px;
+    transform: scale(1.2) 
+}
+.userPos {
     position: absolute;
     top: 70%;
     -ms-transform: translateY(-50%);
@@ -121,10 +132,18 @@ body, html {
     display:flex;
     margin-left: auto;
     margin-right: auto;
+    transition: all .5s ease;
+    transform: scale(1);
 }
-    
-</style>
 
+.pos3:hover {
+    background-color: #eb5493;
+    /*  Making button bigger on hover  */
+    padding: 20px 30px;
+    transform: scale(1.2) 
+}
+</style>
+    
 <script>
     function hideChatButton(){
         document.getElementById("startbutton").style.visibility = "hidden";
