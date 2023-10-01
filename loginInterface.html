@@ -185,7 +185,7 @@ body, html {
         window.alert('hi button2 pressed ee');
 
         var user = firebase.auth().currentUser;
-        var userEmail = user.email;
+        var email = user.email;
             
         var index = email.indexOf("@");
         var name = email.substring(0,index);
