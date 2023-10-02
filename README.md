@@ -1,6 +1,6 @@
 # how to use
 **-MOSAIC** was built for the 2023 Hyphen Hackathon* at Lick-Wilmerding High School by 4 amateur programmers in a time limit of **12 hours**. Every file is published and can be accessed. This exact file was submitted on 09/30/2023 at around 9:00.
-Start here: fyrebolt.github.io/test/loginInterface.html
+Start here: https://fyrebolt.github.io/test/loginInterface.html
 Make and account and join the canvas. Use keyboard keys (0-9) to pick a color. 
 
 # info
