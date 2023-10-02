@@ -24,6 +24,7 @@ I intended to fork this page into a different repo with a more appropriate name 
 This is my first major project published under time pressure with completely original code and a original idea with a group of acquaintances.
 Thank you @baron, @fufu, and @nyang for collaborating with me. 
 
-This will be forked and unnecessary/prior files will be deleted and archived to be _completely finalized_.
+This will be forked and unnecessary/prior files will be deleted and archived to be _completely finalized_. <br>
+-> update: this has been done! (https://github.com/fyrebolt/mosaic)
 
 *Note: the theme was _bridging_, check the devpost (https://devpost.com/software/mosaic-sb6k0i) for further details. 
